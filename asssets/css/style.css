@@ -1,8 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,500&display=swap');
-
 *{
-    overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
 }
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+.header_area .main-menu .navbar .navbar-brand {
+	padding:0 2rem 0 3rem;
+}
+.header_area .main-menu .navbar {
+	padding: 1rem 4rem;
+}
+.header_area .main-menu .nav-item .nav-link {
+	font-size:25px;
+    font-weight:300;
+	padding:1.5rem;
+	color: white;
+}
+.main-btn {
+  display: inline-block;
+  border-radius:50px ;
+  transition: all .4s ease-in-out;
+  padding:10px 27px;
+  background-color: transparent;
+  border:2px solid gray;
+  color:gray;
+  font-weight: 500; 
+  font-size:14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.main-btn:hover {
+  background-color:coral;
+  border-color:coral;
+  color:#fff;
+}
+
 
 
 .animate__animated.animate__bounceInDown {
@@ -13,4 +49,10 @@
   :root {
     --animate-duration: 800ms;
     --animate-delay: 0.9s;
+  }
+  .card-about {
+    transition: all 0.3s;
+  }
+  .card-about:hover {
+    transform: scale(1.15);
   }
