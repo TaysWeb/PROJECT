@@ -97,7 +97,7 @@ header button {
    /*---------- End of HEADER -----------------------*/
 
 
-   /* -------------Headings, links , anchors -------------------*/
+/* -------------Headings, links, anchors -------------------*/
 h2 {
     color:white ;
 }
@@ -320,7 +320,7 @@ li {
 	background-color:#fff;
     
 }
-.Footer .credit {
+.footer .credit {
 	text-align:center;
 	font-size:1.3rem;
 	border-top:1px solid white;
@@ -329,7 +329,7 @@ li {
 	margin-Top:2rem;
 	color:white;	
 }
-.Footer .credit span {
+.footer .credit span {
 	color:orange; 
 }
 
