@@ -4,7 +4,7 @@
     font-family: 'Work Sans', sans-serif;
 }
 /*-----------------------------HEADER -----------------------*/
-header, section {
+header {
     overflow: hidden;
     height:100vh;
 } 
@@ -129,63 +129,263 @@ li {
     /* ----------------End of About Section ------------------*/
 
 /*---------------------------Skills section ----------------------*/
-.box  {
-    border:2px solid crimson;
+.book {
     position: relative;
-    margin:50px;
-  }
-  .box .text {
-      position: absolute ;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%); 
-      text-align:center;
-      color:#fff;
-  }
-  .box .text h2 {
-      font-size: 38px;
-      font-weight: 400;
-      letter-spacing: 1px;
-  }
-  .box .text small {
-      font-size: 18px;
-      display: block;
-  }
-  .circle {
-      width: 200px;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .circle .points {
-      width:3px;
-      height:15px;
-      background: #0007;
-      position: absolute;
-      border-radius: 3px;
-      transform: rotate(calc(var(--i)*var(--rot))) translateY(-100px);
-   
-  }
-  .points.marked {
-      animation: glow 0.04s linear forwards;
-      animation-delay: calc(var(--i)*0.05s);
-  }
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
 
-  @keyframes glow   {
-      0% {
-          background: #0007;
-          box-shadow: none;
-      }
-    
-      100% {
-          background: var(--bgColor);
-          box-shadow:var(--bgColor);
-      }
   
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
   }
+  .cover {
+   
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
+ .text {
+    position: relative ;
+    top:10%;
+    right:30%;
+    transform: translate(-50%,-50%); 
+    text-align:center;
+    color:#000;
+}
+.text h2 {
+  color:#000;
+}
 
+.cover .text small {
+    font-size: 18px;
+    display: inline;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle .points {
+    width:3px;
+    height:15px;
+    background: #0007;
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-100px);
+ 
+}
+.points.marked {
+    animation: glow 0.04s linear forwards;
+    animation-delay: calc(var(--i)*0.05s);
+}
+@keyframes glow 
+{
+    0% {
+        background: #0007;
+        box-shadow: none;
+    }
+  
+    100% {
+        background: var(--bgColor);
+        box-shadow:var(--bgColor);
+    }
 
-
+}
 
 /*--------------------------end of skills ----------------------- */
+
+/*---------------Reviews---------*/
+.testimonals-contain {
+  position: relative;
+  margin-Top:-10px;
+  border-radius:50%;
+}
+.testimonals-contain h2 {
+	text-align:center;
+	font-size:45px;
+	font-weight:600; 
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+q {font-style: italic;}
+.author {color: cornflowerblue;}
+
+/*---------------End of Reviews---------*/
+
+/*-------------------Footer------------------------*/
+
+.footer {
+	background: #7575a3;
+	padding:75px 0;
+	
+}
+.box-container {
+  max-width:1200px;
+	margin:auto;
+}
+
+.footer-col {
+	width:25%;
+	padding: 0 25px;
+}
+.footer-col ul {
+    list-style:none;
+}
+.footer-col h3 {
+	font-size:26px;
+	color:#fff;
+	text-transform:capitalize;
+	margin-bottom:35px;
+	font-weight:500;
+	position:relative;
+}
+.footer-col h3::before{
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-10px;
+	background-color:#f89e02; 
+	height:3px;
+	box-sizing:border-box;
+    width:50px;
+	
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom:10px;
+}
+.footer-col ul li a { 
+   font-size:18px;
+   text-transform:capitalize;
+   color:#fff;
+   text-decoration:none;
+   font-weight:300;
+   color:#bbbbbb;
+   gap:1.2rem;
+   display:block;
+   transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+	color:#fff;
+	padding-left:8px;	
+}
+.footer-col .socials a {
+	display:inline-block;
+	height:40px;
+	width:40px;
+	background-color:rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align:center;
+	line-height:40px;
+	border-radius:50%;
+	color:#fff;
+	transition: all 0.5s ease;
+}
+.footer-col .socials a:hover {
+	color:#24262b;
+	background-color:#fff;
+    
+}
+.Footer .credit {
+	text-align:center;
+	font-size:1.3rem;
+	border-top:1px solid white;
+	padding:1rem;
+	padding-top:2rem;
+	margin-Top:2rem;
+	color:white;	
+}
+.Footer .credit span {
+	color:orange; 
+}
+
+/*-------------------End of Footer------------------------*/
